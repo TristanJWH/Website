@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   <title>Blog</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body style="background-color:#ECF2F5;">
+   <!--Navbar-->
+   <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #40484F;">
+     <a class="navbar-brand" href="index.html">Tristan Hodgson</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item">
+           <a class="nav-link" href="index.html">Home</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link" href="blog.html">Blog</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="about.html">About me</a>
+         </li>
+       </ul>
+     </div>
+   </nav>
+   <!--Content-->
+   <div class="container">
+          <h1 id="title">Blog</h1>
+          <h2 id="featured articles">Featured Articles</h2>
+          <!--Section 1: Featured Articles-->
+             <div class="card-deck">
+                <!--Card 1-->
+               <div class="card">
+                 <img src="Articles/building-jarvis-part-1.jpg" class="card-img-top" alt="A picture of a google home">
+                 <div class="card-body">
+                   <h5 class="card-title">Building Jarvis: 1</h5>
+                   <p class="card-text">Announcing a new project: a voice assistant in python</p>
+                   <a href="Articles/building-jarvis-part-1.html" class="btn btn-primary">Read</a>
+                 </div>
+                 <div class="card-footer">
+                   <small class="text-muted">23/06/2020</small>
+                 </div>
+               </div>
+               <!--Card 2-->
+               <div class="card">
+                 <img src="Articles/my-terminal.png" class="card-img-top" alt="A picture of my terminal">
+                 <div class="card-body">
+                   <h5 class="card-title">My Terminal</h5>
+                   <p class="card-text">A quick look at how I have my terminal set up</p>
+                   <a href="Articles/my-terminal.html" class="btn btn-primary">Read</a>
+                 </div>
+                 <div class="card-footer">
+                   <small class="text-muted">23/06/2020</small>
+                 </div>
+               </div>
+               <!--Card 3-->
+               <div class="card">
+                 <img src="3.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h5 class="card-title">Title 3</h5>
+                   <p class="card-text">Another short summery of this article</p>
+                   <a href="#" class="btn btn-primary">Read</a>
+                 </div>
+                 <div class="card-footer">
+                   <small class="text-muted">Last updated 3 mins ago</small>
+                 </div>
+               </div>
+             </div>
+         <br>
+         <!--Section 2: All Articles-->
+         <h2 id="all articles">All Articles</h2>
+         <!--Row 1-->
+         <div class="row">
+            <div class="col-sm-6">
+               <!--Card 1-->
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Building Jarvis: 1</h5>
+                     <p class="card-text">Announcing a new project: a voice assistant in python</p>
+                     <a href="Articles/building-jarvis-part-1.html" class="btn btn-primary">Read</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6">
+               <!--Card 2-->
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">My Terminal</h5>
+                     <p class="card-text">A quick look at how I have my terminal set up</p>
+                     <a href="#" class="btn btn-primary">Read</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+   </div>
+</body>
+</html>
