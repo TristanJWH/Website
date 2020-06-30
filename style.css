@@ -21,6 +21,11 @@
    padding-right: 5%;
    margin: 28px auto 0;
 }
+.new_article_section {
+   position:relative;
+   background-color: #ffffff;
+   padding-left: 20%;
+}
 .blog_section {
    padding-top: 5%;
    padding-bottom: 10%;
