@@ -81,3 +81,10 @@ blockquote {
     width: 100%;
     bottom: 0px;
 }
+a {
+   color: #3586BD;
+}
+.code {
+   font-family: 'Fira Code', monospace;
+  color: #3586BD;
+}

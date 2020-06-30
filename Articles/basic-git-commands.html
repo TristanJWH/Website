@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   <title>Blog</title>
+   <link rel="stylesheet" href="../style.css">
+   <!--Fonts-->
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+   <!--Bootstrap-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #ECF2F5">
+   <!--Navbar-->
+   <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #40484F;">
+     <a class="navbar-brand" href="../index.html">Tristan Hodgson</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../programming.html">Programming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../linux.html">Linux</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About me</a>
+          </li>
+        </ul>
+     </div>
+   </nav>
+   <!--Content-->
+   <div class="article">
+          <h1 id="title">Basic Git Commands</h1>
+          <!--Image-->
+             <figure class="figure">
+                <img src="basic-git-commands.jpg" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption">                <span>Photo by <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Pankaj Patel</a> on <a href="https://unsplash.com/s/photos/git?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
+             </figure>
+
+         <h2>What is Git</h2>
+         <p>Git is a command line utility that is used for version control.
+         But what does this mean?
+         It means that it is the solution (there are others but none quite as good) to maintaining source code.
+         It allows many versions of a project to be kept without making full copies of the source code every time you make changes.
+         </p>
+         <p>Git can also link to git servers such as Github, Gitlab, Bitbucket or your own git server.
+         This can be useful for collaberation because many people can contribute code to the project without you using a regular cloud storage providor that does not include these festures.</p>
+         <h2>How Do You Use It</h2>
+         <p>Git has a reputation of being a difficult program to use partly because it is terminal (or command prompt) only and that it has a somewhat confusing set of terminology.</p>
+         <p>While I will not adress that last problem in this article (if you wish we can watch <a href="https://www.youtube.com/watch?v=2sjqTHE0zok">this</a> youtube video that explains it well).
+         But I will provide a cheatsheet to the magic words to make the hole system work.</p>
+         <h2>The Cheatsheet</h2>
+         <table class="table table-bordered">
+           <thead>
+             <tr>
+               <th scope="col">Command</th>
+               <th scope="col">Description</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td><code class="code">git init</td>
+               <td>Turn the current folder into a git repo</td>
+             </tr>
+             <tr>
+                <td><code class="code">git add file</td>
+               <td>Add a file to the staging area</td>
+             </tr>
+             <tr>
+                <td><code class="code">git add .</td>
+               <td>Add all files in a folder to a repo</td>
+             </tr>
+             <tr>
+                <td><code class="code">git commit</td>
+               <td>Create a snapshot of the repo (add a message)</td>
+             </tr>
+             <tr>
+                <td><code class="code">git push remote branch:remote-branch</td>
+               <td>Push the commited changes to a git server</td>
+             </tr>
+             <tr>
+                <td><code class="code">git branch new-branch-name</td>
+                <td>Create a new branch for a repository</td>
+             </tr>
+             <tr>
+                <td><code class="code">git checkout branch-name</td>
+                <td>Switch to looking at a different branch</td>
+             </tr>
+             <tr>
+                <td><code class="code">git log --graph --all --decorate --oneline</td>
+                <td>Get a visulisation of commits and branches</td>
+             </tr>
+             <tr>
+                <td><code class="code">git clone url</td>
+                <td>Copy a git remote directory to your computer</td>
+             </tr>
+           </tbody>
+         </table>
+         <p>I hope that this cheatsheet will help you because it certianly will help me.
+         I use github as part of the hosting for this website and consantly forget even the most basic of git commands.
+         So as much as I invite you to use this cheatsheet it is just as much for me as for you.</p>
+
+         <div id="footer">
+            <p style="color: #ECF2F5;text-align: left;padding: 1%;">This piece was written by Tristan Hodgson</p>
+         </div>
+   </div>
+</body>
+</html>
