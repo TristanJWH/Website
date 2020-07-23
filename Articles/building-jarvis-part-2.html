@@ -72,10 +72,33 @@ def listen():
         response = "I don't understand" 
         print(response)
         return response
+
+print(listen())
              </pre>
              <p>This code starts by initilising the recogniser and the microphone.
                  Then it prints the message "Speak: " and then listens to you.
              After this it tries to turn the speech into text, if this fails (for example if you don't say anything) it will return "I don't understand" but otherwise it will return what you said.</p>
+             <h2>Speaking</h2>
+             <p>Another very important feature of a voice assistant is it being able to talk.
+                 To do this we will use the <a href="https://pypi.org/project/gTTS/">gTTS</a> module this will allow us to easily convert text into an mp3 file.
+                 As with the code for listening we will make it a function so we can reuse the code.</p>
+             <pre class="code">
+from gtts import gTTS
+import os
+
+def speak(response, language, output_file):
+    # Passing the text and language to the engine
+    text = gTTS(text=response, lang=language, slow=False)
+    # Saving the converted audio in a mp3 file in
+    text.save(output_file)
+    # Playing the converted file
+    os.system(f"play {output_file}")
+
+speak("some text", en, "output.mp3")
+             </pre>
+             <p>This code starts by converting the text to audio.
+                 But in order that we can play that audio we must save that audio to an mp3 file.
+             Then we use the play command from sox to play that file (with just a normal terminal command).</p>
          <div id="footer">
             <p style="color: #F2F3F7;text-align: left;padding: 1%;">First created: 23/07/2020</p>
          </div>
