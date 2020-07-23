@@ -99,6 +99,23 @@ speak("some text", en, "output.mp3")
              <p>This code starts by converting the text to audio.
                  But in order that we can play that audio we must save that audio to an mp3 file.
              Then we use the play command from sox to play that file (with just a normal terminal command).</p>
+             <h2>Matching</h2>
+             <p>Now to string it all together we must be able to look at the text that we have said so that we can say an output.
+                 We are going to do this with regular expressions.
+                 While this may seem big to anyone who knows what regular expressions (and are not as experienced with them as me), we are going to be using them very basically.
+                 To those who do not know what they are they are a more advanced version of the find tool in many programs.</p>
+    <pre class="code">          
+    import re
+
+    querry = "Hello everyone"
+
+    if re.search("hello", querry) != None:
+        print("Hello world")
+    </pre>
+             <p>The way I am doing the this (I am not saying it is the best way just my way) is to match the text and see if the result is not None.
+                 If you match a regular expression to a string it will show every example of that regular expression.
+                 If there are no examples it will return nothing or None.
+             Therefore if matching the regular expression is not equal to None then we know that our text contains the regular expression.</p>
          <div id="footer">
             <p style="color: #F2F3F7;text-align: left;padding: 1%;">First created: 23/07/2020</p>
          </div>
