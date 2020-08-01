@@ -41,7 +41,7 @@
    </nav>
    <!--Content-->
    <div class="article">
-          <h1 id="title">Building Javis: 2</h1>
+          <h1 id="title">Building Jarvis: 2</h1>
           <!--Image-->
              <figure class="figure">
                 <img src="building-jarvis-part-2.jpg" class="figure-img img-fluid rounded">
@@ -50,7 +50,7 @@
              <h2>Technical Details</h2>
              <p>This article will mostly be about the technical details of exactly how this voice assistant that I am programming will work.
                  In the first article in this series I detailed a basic overview of the features of this voice assistant.
-                 While some of features have changed or been removed completely, others have been added over the course of the programming of this project.</p>
+                 While some of the features have changed or been removed completely, others have been added over the course of the programming of this project.</p>
              <h2>Listening</h2>
              <p>One of the most important features of a voice assistant is that it can listen to you.
                  For this, I will use the <a href="https://pypi.org/project/SpeechRecognition/">Speech Recognition</a> module.
@@ -75,13 +75,13 @@ def listen():
 
 print(listen())
              </pre>
-             <p>This code starts by initilising the recogniser and the microphone.
+             <p>This code starts by initialising the recognizer and the microphone.
                  Then it prints the message "Speak: " and then listens to you.
              After this it tries to turn the speech into text, if this fails (for example if you don't say anything) it will return "I don't understand" but otherwise it will return what you said.</p>
              <h2>Speaking</h2>
              <p>Another very important feature of a voice assistant is it being able to talk.
                  To do this we will use the <a href="https://pypi.org/project/gTTS/">gTTS</a> module this will allow us to easily convert text into an mp3 file.
-                 As with the code for listening we will make it a function so we can reuse the code.</p>
+                 As with the code for listening we will make it a function so that we can reuse the code.</p>
              <pre class="code">
 from gtts import gTTS
 import os
@@ -100,11 +100,11 @@ speak("some text", en, "output.mp3")
                  But in order that we can play that audio we must save that audio to an mp3 file.
              Then we use the play command from sox to play that file (with just a normal terminal command).</p>
              <h2>Matching</h2>
-             <p>Now to string it all together we must be able to look at the text that we have said so that we can say an output.
-                 We are going to do this with regular expressions.
-                 While this may seem big to anyone who knows what regular expressions (and are not as experienced with them as me), we are going to be using them very basically.
-                 To those who do not know what they are they are a more advanced version of the find tool in many programs.</p>
-    <pre class="code">          
+             <p>The way I am doing this (I am not saying it is the best way just my way) is to match the text and see if the result is not None.
+                 If you match a regular expression to a string, it will show every example of that regular expression.
+                 If there are no examples it will return nothing or None.
+                 Therefore, if matching the regular expression is not equal to None then we know that our text contains the regular expression and is required to say something.</p>
+    <pre class="code">
     import re
 
     querry = "Hello everyone"
@@ -115,7 +115,96 @@ speak("some text", en, "output.mp3")
              <p>The way I am doing the this (I am not saying it is the best way just my way) is to match the text and see if the result is not None.
                  If you match a regular expression to a string it will show every example of that regular expression.
                  If there are no examples it will return nothing or None.
-             Therefore if matching the regular expression is not equal to None then we know that our text contains the regular expression.</p>
+             Therefore if matching the regular expression is not equal to None then we know that our text contains the regular expression and is required to say something.</p>
+             <h2>The Functions</h2>
+             <p>For the final stage of the program we have to create some functions that return things for the voice assistant to say.
+                 For example, we might want the program to tell us the time or the weather.
+                 I am not going to talk in depth about every single function that I created but give you an example of one and then let you go and look at my GitHub.</p>
+             <p>For my example function I am going to use the open a program command:</p>
+             <pre class="code">
+import random as rand
+import os
+
+def os_command(program):
+    random = 0
+    os.system(program)
+    random = rand.randint(0, 3)
+    if random == 0:
+        return "opening"
+    elif random == 1:
+        return "okay"
+    elif random == 2:
+        return "affirmative"
+    elif random == 3:
+        return "check"
+             </pre>
+             <p>What this function does is take in an input of what program you wish to run performs that as an operating system command (for me on Linux, that is any bash command) and gives a random output for the program to speak.</p>
+             <h2>Putting it all Together</h2>
+             <p>All we need to now is to put our entire program together:</p>
+             <pre class="code">
+
+import random as rand
+import os
+import speech_recognition as sr
+from gtts import gTTS
+import re
+
+def os_command(program):
+    random = 0
+    os.system(program)
+    random = rand.randint(0, 3)
+    if random == 0:
+        return "opening"
+    elif random == 1:
+        return "okay"
+    elif random == 2:
+        return "affirmative"
+    elif random == 3:
+        return "check"
+
+def speak(response, language, output_file):
+    # Passing the text and language to the engine
+    text = gTTS(text=response, lang=language, slow=False)
+    # Saving the converted audio in a mp3 file in
+    text.save(output_file)
+    # Playing the converted file
+    os.system(f"play {output_file}")
+
+def listen():
+    # Speech to text
+    r = sr.Recognizer()                      # initialize recogniser
+    with sr.Microphone() as source:
+        print("Speak: ")
+        audio = r.listen(source)             # listen to the source
+    try:
+        querry = r.recognize_google(audio)   # use recogniser to convert our audio into text
+        return querry.lower()
+    except:
+        response = "I don't understand"
+        print(response)
+        return response
+
+while True:
+    querry = listen()
+
+    if re.search("firefox", querry) != None:
+        response = os_command("nohup firefox > /dev/null 2>&1 &")
+    else:
+        response = "Sorry I do not understand"
+    speak(response, "en", "test-file.mp3")
+
+             </pre>
+             <p>While this may look like a lot of code, really all it is the code that we have created throughout this article.
+                 With two exceptions, I added a while loop around the part where we listen, match and speak so that we can ask it many times
+                 (more important for a voice assistant that can do more than this) and for the command to be run I put <span class="code">"nohup firefox > /dev/null 2>&1 &"</span>
+                 rather than just <span class="code">"firefox"</span> so that it opens the program and then returns to listening rather than just opening a log for that Firefox window.</p>
+             <h2>Conclusion</h2>
+             <p>In conclusion, building a voice assistant is not actually as difficult a task as it may seem.
+                 In this article we have created a basic voice assistant that can be expanded to do basically anything that you want.
+                 Also, because of the notes throughout this article you know exactly how it all works and fits together.</p>
+             <p>While it is probably no better for privacy than a Google Home or Alexa due to the Google Speech Recognition and Google Text to Speech, we do control every over part.
+             Some may argue that this makes this voice assistant a massive security risk, I would argue that it is better than the biggest alternatives: Google Home and Alexa.</p>
+             <a href="https://github.com"><button type="button" class="btn btn-primary btn-lg">View the code on GitHub</button></a>
          <div id="footer">
             <p style="color: #F2F3F7;text-align: left;padding: 1%;">First created: 23/07/2020</p>
          </div>
