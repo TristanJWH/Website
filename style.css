@@ -29,6 +29,12 @@
    padding-right: 5%;
    margin: 28px auto 0;
 }
+#featured-articles {
+    text-align: center;
+}
+#all-articles {
+    text-align: center;
+}
 #title {
     font-family: roboto;
     color: #40484F;
