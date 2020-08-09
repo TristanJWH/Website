@@ -25,7 +25,7 @@
 
 <body style="background-color:#F7F7F9;">
    <!--Navbar-->
-   <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #40484F;">
+   <nav class="navbar navbar-expand-lg fixed-top navbar-dark " style="background-color: #40484F;">
       <a class="navbar-brand" href="index.html">Tristan Hodgson</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,11 +37,24 @@
             <li class="nav-item">
                <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item active">
-               <a class="nav-link" href="programming.html">Programming</a>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Programming
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#F7F7F9;border-color:#40484F;">
+                    <a class="dropdown-item" href="programming.html">All</a>
+                    <a class="dropdown-item" href="personal-projects.html">Personal Projects</a>
+                    <a class="dropdown-item" href="tools.html">Tools</a>
+                </div>
             </li>
-            <li class="nav-item">
-               <a class="nav-link" href="linux.html">Linux</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Linux
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#F7F7F9;border-color:#40484F;">
+                    <a class="dropdown-item" href="linux.html">All</a>
+                    <a class="dropdown-item" href="configs.html">Configs</a>
+                </div>
             </li>
             <li class="nav-item">
                <a class="nav-link" href="about.html">About me</a>
@@ -49,9 +62,10 @@
          </ul>
       </div>
    </nav>
+
    <!--Content-->
    <div class="blog_section">
-      <h1 id="title">Articles</h1>
+      <h1 id="title">Programming</h1>
       <br>
       <h2 id="featured-articles">Featured Articles</h2>
       <!--Section 1: Featured Articles-->
