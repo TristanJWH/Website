@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Blog</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="background-color: #f7f7f9;">
+    <!--Navbar-->
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-dark"
+      style="background-color: #40484f;"
+    >
+      <a class="navbar-brand" href="index.html">Tristan Hodgson</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../../index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Programming
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+              style="background-color: #f7f7f9; border-color: #40484f;"
+            >
+              <a class="dropdown-item" href="../../../programming.html">All</a>
+              <a class="dropdown-item" href="../../../personal-projects.html"
+                >Personal Projects</a
+              >
+              <a class="dropdown-item" href="../../../tools.html">Tools</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Linux
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+              style="background-color: #f7f7f9; border-color: #40484f;"
+            >
+              <a class="dropdown-item" href="../../../linux.html">All</a>
+              <a class="dropdown-item" href="../../../configs.html">Configs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../../about.html">About me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Content-->
+    <div class="article">
+      <h1 id="title">Building Jarvis: 2</h1>
+      <!--Image-->
+      <figure class="figure">
+        <img
+          src="building-jarvis-part-2.jpg"
+          class="figure-img img-fluid rounded"
+        />
+        <figcaption class="figure-caption">
+          Photo by
+          <a
+            href="https://unsplash.com/@nathanareboucas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+            >Nathana Rebouças</a
+          >
+          on
+          <a
+            href="https://unsplash.com/s/photos/voice-assistant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </figcaption>
+      </figure>
+      <h2>Technical Details</h2>
+      <p>
+        This article will mostly be about the technical details of exactly how
+        this voice assistant that I am programming will work. In the first
+        article in this series I detailed a basic overview of the features of
+        this voice assistant. While some of the features have changed or been
+        removed completely, others have been added over the course of the
+        programming of this project.
+      </p>
+      <h2>Listening</h2>
+      <p>
+        One of the most important features of a voice assistant is that it can
+        listen to you. For this, I will use the
+        <a href="https://pypi.org/project/SpeechRecognition/"
+          >Speech Recognition</a
+        >
+        module. For the first part of this article we will program something to
+        print our speech to the screen. To help us to use the code latter on in
+        the project we will make this as a function.
+      </p>
+      <pre class="code">
+import speech_recognition as sr
+
+def listen():
+    # Speech to text
+    r = sr.Recognizer()                      # initialize recognizer
+    with sr.Microphone() as source:          # mention source
+        print("Speak: ")
+        audio = r.listen(source)             # listen to the source
+    try:
+        querry = r.recognize_google(audio)   # use recognizer to convert our audio into text
+        return querry.lower()
+    except:
+        response = "I don't understand" 
+        print(response)
+        return response
+
+print(listen())
+             </pre
+      >
+      <p>
+        This code starts by initialising the recognizer and the microphone. Then
+        it prints the message "Speak: " and then listens to you. After this it
+        tries to turn the speech into text, if this fails (for example if you
+        don't say anything) it will return "I don't understand" but otherwise it
+        will return what you said.
+      </p>
+      <h2>Speaking</h2>
+      <p>
+        Another very important feature of a voice assistant is it being able to
+        talk. To do this we will use the
+        <a href="https://pypi.org/project/gTTS/">gTTS</a> module this will allow
+        us to easily convert text into an mp3 file. As with the code for
+        listening we will make it a function so that we can reuse the code.
+      </p>
+      <pre class="code">
+from gtts import gTTS
+import os
+
+def speak(response, language, output_file):
+    # Passing the text and language to the engine
+    text = gTTS(text=response, lang=language, slow=False)
+    # Saving the converted audio in a mp3 file in
+    text.save(output_file)
+    # Playing the converted file
+    os.system(f"play {output_file}")
+
+speak("some text", en, "output.mp3")
+             </pre
+      >
+      <p>
+        This code starts by converting the text to audio. But in order that we
+        can play that audio we must save that audio to an mp3 file. Then we use
+        the play command from sox to play that file (with just a normal terminal
+        command).
+      </p>
+      <h2>Matching</h2>
+      <p>
+        The way I am doing this (I am not saying it is the best way just my way)
+        is to match the text and see if the result is not None. If you match a
+        regular expression to a string, it will show every example of that
+        regular expression. If there are no examples it will return nothing or
+        None. Therefore, if matching the regular expression is not equal to None
+        then we know that our text contains the regular expression and is
+        required to say something.
+      </p>
+      <pre class="code">
+    import re
+
+    querry = "Hello everyone"
+
+    if re.search("hello", querry) != None:
+        print("Hello world")
+    </pre
+      >
+      <p>
+        The way I am doing the this (I am not saying it is the best way just my
+        way) is to match the text and see if the result is not None. If you
+        match a regular expression to a string it will show every example of
+        that regular expression. If there are no examples it will return nothing
+        or None. Therefore if matching the regular expression is not equal to
+        None then we know that our text contains the regular expression and is
+        required to say something.
+      </p>
+      <h2>The Functions</h2>
+      <p>
+        For the final stage of the program we have to create some functions that
+        return things for the voice assistant to say. For example, we might want
+        the program to tell us the time or the weather. I am not going to talk
+        in depth about every single function that I created but give you an
+        example of one and then let you go and look at my GitHub.
+      </p>
+      <p>
+        For my example function I am going to use the open a program command:
+      </p>
+      <pre class="code">
+import random as rand
+import os
+
+def os_command(program):
+    random = 0
+    os.system(program)
+    random = rand.randint(0, 3)
+    if random == 0:
+        return "opening"
+    elif random == 1:
+        return "okay"
+    elif random == 2:
+        return "affirmative"
+    elif random == 3:
+        return "check"
+             </pre
+      >
+      <p>
+        What this function does is take in an input of what program you wish to
+        run performs that as an operating system command (for me on Linux, that
+        is any bash command) and gives a random output for the program to speak.
+      </p>
+      <h2>Putting it all Together</h2>
+      <p>All we need to now is to put our entire program together:</p>
+      <pre class="code">
+
+import random as rand
+import os
+import speech_recognition as sr
+from gtts import gTTS
+import re
+
+def os_command(program):
+    random = 0
+    os.system(program)
+    random = rand.randint(0, 3)
+    if random == 0:
+        return "opening"
+    elif random == 1:
+        return "okay"
+    elif random == 2:
+        return "affirmative"
+    elif random == 3:
+        return "check"
+
+def speak(response, language, output_file):
+    # Passing the text and language to the engine
+    text = gTTS(text=response, lang=language, slow=False)
+    # Saving the converted audio in a mp3 file in
+    text.save(output_file)
+    # Playing the converted file
+    os.system(f"play {output_file}")
+
+def listen():
+    # Speech to text
+    r = sr.Recognizer()                      # initialize recogniser
+    with sr.Microphone() as source:
+        print("Speak: ")
+        audio = r.listen(source)             # listen to the source
+    try:
+        querry = r.recognize_google(audio)   # use recogniser to convert our audio into text
+        return querry.lower()
+    except:
+        response = "I don't understand"
+        print(response)
+        return response
+
+while True:
+    querry = listen()
+
+    if re.search("firefox", querry) != None:
+        response = os_command("nohup firefox > /dev/null 2>&1 &")
+    else:
+        response = "Sorry I do not understand"
+    speak(response, "en", "test-file.mp3")
+
+             </pre
+      >
+      <p>
+        While this may look like a lot of code, really all it is the code that
+        we have created throughout this article. With two exceptions, I added a
+        while loop around the part where we listen, match and speak so that we
+        can ask it many times (more important for a voice assistant that can do
+        more than this) and for the command to be run I put
+        <span class="code">"nohup firefox > /dev/null 2>&1 &"</span> rather than
+        just <span class="code">"firefox"</span> so that it opens the program
+        and then returns to listening rather than just opening a log for that
+        Firefox window.
+      </p>
+      <h2>Conclusion</h2>
+      <p>
+        In conclusion, building a voice assistant is not actually as difficult a
+        task as it may seem. In this article we have created a basic voice
+        assistant that can be expanded to do basically anything that you want.
+        Also, because of the notes throughout this article you know exactly how
+        it all works and fits together.
+      </p>
+      <p>
+        While it is probably no better for privacy than a Google Home or Alexa
+        due to the Google Speech Recognition and Google Text to Speech, we do
+        control every over part. Some may argue that this makes this voice
+        assistant a massive security risk, I would argue that it is better than
+        the biggest alternatives: Google Home and Alexa.
+      </p>
+      <a href="https://github.com/TristanJWH/Jarvis"
+        ><button
+          type="button"
+          class="btn btn-primary btn-lg"
+          style="background-color: #3586bd; border-color: #3586bd;"
+        >
+          View the code on GitHub
+        </button></a
+      >
+      <div id="footer">
+        <p style="color: #f7f7f9; text-align: left; padding: 1%;">
+          First created: 29/07/2020
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
    <title>Blog</title>
-   <link rel="stylesheet" href="../style.css">
+   <link rel="stylesheet" href="../../../style.css">
    <!--Fonts-->
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
@@ -16,29 +16,43 @@
 </head>
 <body style="background-color: #F7F7F9">
    <!--Navbar-->
-   <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #40484F;">
-     <a class="navbar-brand" href="../index.html">Tristan Hodgson</a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <nav class="navbar navbar-expand-lg fixed-top navbar-dark " style="background-color: #40484F;">
+    <a class="navbar-brand" href="index.html">Tristan Hodgson</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
-     </button>
+    </button>
 
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
+             <a class="nav-link" href="../../../index.html">Home</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../programming.html">Programming</a>
+          <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Programming
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#F7F7F9;border-color:#40484F;">
+                  <a class="dropdown-item" href="../../../programming.html">All</a>
+                  <a class="dropdown-item" href="../../../personal-projects.html">Personal Projects</a>
+                  <a class="dropdown-item" href="../../../tools.html">Tools</a>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Linux
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#F7F7F9;border-color:#40484F;">
+                  <a class="dropdown-item" href="../../../linux.html">All</a>
+                  <a class="dropdown-item" href="../../../configs.html">Configs</a>
+              </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../linux.html">Linux</a>
+             <a class="nav-link" href="../../../about.html">About me</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../about.html">About me</a>
-          </li>
-        </ul>
-     </div>
-   </nav>
+       </ul>
+    </div>
+ </nav>
    <!--Content-->
    <div class="article">
           <h1 id="title">Basic Git Commands</h1>

@@ -1,96 +1,104 @@
 .main_image {
-   border: 0;
-   max-width: 100%;
-   height: auto;
-   width: auto;
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 .caption {
-   text-align: center;
-   font-size: 80%;
+  text-align: center;
+  font-size: 80%;
 }
 .article {
-   padding-top: 5%;
-   padding-bottom: 10%;
-   max-width: 900px;
-   padding-left: 5%;
-   padding-right: 5%;
-   margin: 28px auto 0;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  max-width: 900px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 28px auto 0;
 }
 .new_article_section {
-   position:relative;
-   background-color: #ffffff;
-   padding-left: 20%;
+  position: relative;
+  background-color: #ffffff;
+  padding-left: 20%;
 }
 .blog_section {
-   padding-top: 5%;
-   padding-bottom: 10%;
-   max-width: 1000px;
-   padding-left: 5%;
-   padding-right: 5%;
-   margin: 28px auto 0;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  max-width: 1000px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 28px auto 0;
 }
 #featured-articles {
-    text-align: center;
+  text-align: center;
 }
 #all-articles {
-    text-align: center;
+  text-align: center;
 }
 #title {
-    font-family: roboto;
-    color: #40484F;
-    text-align: center;
-    top: 0%;
-    position: relative;
-    font-size: 300%;
+  font-family: roboto;
+  color: #40484f;
+  text-align: center;
+  top: 0%;
+  position: relative;
+  font-size: 300%;
 }
-h2,h3,h4,h5,h6 {
-    font-family: roboto;
-    color: #40484F;
-    font-size: 120%;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: roboto;
+  color: #40484f;
+  font-size: 120%;
 }
 p {
-    font-family: roboto;
-    color: #40484F;
-    font-size: 120%;
+  font-family: roboto;
+  color: #40484f;
+  font-size: 120%;
 }
-table, th, td {
-    border: 1px solid #40484F;
-    border-collapse: collapse;
+table,
+th,
+td {
+  border: 1px solid #40484f;
+  border-collapse: collapse;
 }
 th {
-    border: 1px solid #40484F;
-    border-collapse: collapse;
-    font-family: roboto;
-    color: #40484F;
-    text-align: left;
-    font-size: 120%;
+  border: 1px solid #40484f;
+  border-collapse: collapse;
+  font-family: roboto;
+  color: #40484f;
+  text-align: left;
+  font-size: 120%;
 }
 td {
-    border: 1px solid #40484F;
-    border-collapse: collapse;
-    font-family: roboto;
-    color: #40484F;
-    font-size: 120%;
+  border: 1px solid #40484f;
+  border-collapse: collapse;
+  font-family: roboto;
+  color: #40484f;
+  font-size: 120%;
 }
-dt,dd,li{
-    font-family: roboto;
-    font-size: 120%;
+dt,
+dd,
+li {
+  font-family: roboto;
+  font-size: 120%;
 }
 blockquote {
-    font-family: roboto;
-    font-size: 120%;
+  font-family: roboto;
+  font-size: 120%;
 }
 #footer {
-    background-color: #40484F;
-    position: relative;
-    margin-top: 5%;
-    width: 100%;
-    bottom: 0px;
+  background-color: #40484f;
+  position: relative;
+  margin-top: 5%;
+  width: 100%;
+  bottom: 0px;
 }
 a {
-   color: #3586BD;
+  color: #3586bd;
 }
 .code {
-   font-family: 'Fira Code', monospace;
-  color: #3586BD;
+  font-family: "Fira Code", monospace;
+  color: #3586bd;
 }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Blog</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="background-color: #f7f7f9;">
+    <!--Navbar-->
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-dark"
+      style="background-color: #40484f;"
+    >
+      <a class="navbar-brand" href="index.html">Tristan Hodgson</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../../index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Programming
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+              style="background-color: #f7f7f9; border-color: #40484f;"
+            >
+              <a class="dropdown-item" href="../../../programming.html">All</a>
+              <a class="dropdown-item" href="../../../personal-projects.html"
+                >Personal Projects</a
+              >
+              <a class="dropdown-item" href="../../../tools.html">Tools</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Linux
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+              style="background-color: #f7f7f9; border-color: #40484f;"
+            >
+              <a class="dropdown-item" href="../../../linux.html">All</a>
+              <a class="dropdown-item" href="../../../configs.html">Configs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../../about.html">About me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Content-->
+    <div class="article">
+      <h1 id="title">My Terminal</h1>
+      <!--Image-->
+      <figure class="figure">
+        <img
+          src="my-terminal.png"
+          class="figure-img img-fluid rounded"
+          alt="..."
+        />
+        <figcaption class="figure-caption">
+          A screenshot of my terminal emulator
+        </figcaption>
+      </figure>
+      <h2>Alacritty</h2>
+      <p>
+        I use <a href="https://github.com/alacritty/alacritty">alacritty</a> as
+        my terminal emulator because it is fast, even if I can't claim that I
+        notice that it is supposedly the fastest. This is important to me
+        because if I want to use my terminal it is because I won't to do
+        something quickly therfore waiting around for terminal to load is not
+        particually appealing. Inside of alacritty I use the nord colour theme
+        because it is a nice-looking, cool-coloured colour scheme.
+      </p>
+      <h2>ZSH</h2>
+      <p>
+        If I honest I am not sure why I use
+        <a href="https://www.zsh.org/">ZSH</a>. I think I tried it and then
+        never switched back. Now I use it because I don't really care. I have my
+        ZSH config stored in ~/.config/zsh which you may know is different to
+        the default mess of files in my home folder. To do this yourself you add
+        the line <code class="code">export ZDOTDIR=$HOME/.config/zsh</code> to
+        your ~/.zshenv file.
+      </p>
+      <h2>Starship</h2>
+      <p>
+        I use the <a href="https://starship.rs/">starship</a> cross-shell prompt
+        because it is more easily customisable than many other prompts. Also, I
+        like that it is cross-shell because it means that if I ever get a reason
+        to change shells then I can keep my prompt with no changes. I have my
+        prompt set up to shoe me my working path and then a ❯ symbol on the left
+        all using my terminal's cyan colour. I like this simple prompt because
+        it doesn't distract me and due to how little I need to see other
+        information. Then again I may end up adding a git part to my prompt
+        because I hope to get better at uploading things to my github.
+      </p>
+      <h2>Ufetch</h2>
+      <p>
+        Many people use a program call neofetch in order to display a picture
+        (made of characters) of their distribution's logo and show basic system
+        information. But while this always appealed to me but it slowed the
+        startup of my terminal to a crawl (I may be exaggerating just a bit). My
+        solution a program called
+        <a href="https://gitlab.com/jschx/ufetch">Ufetch</a>. The only
+        disadvantage of this program over a program like neofetch is that it
+        cannot auto detect the distribution you are using.
+      </p>
+      <p>
+        While there is a program called
+        <a href="https://github.com/dylanaraps/pfetch">Pfetch</a> that is the
+        same underlying program as Ufetch but with auto detection, I do not use
+        it because I don't change distribution much so it barely matters.
+      </p>
+      <div id="footer">
+        <p style="color: #f7f7f9; text-align: left; padding: 1%;">
+          First created: 23/07/2020
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
