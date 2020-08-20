@@ -1,143 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>Blog</title>
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+        <!--Bootstrap-->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-   <title>Blog</title>
-   <link rel="stylesheet" href="style.css">
-   <!--Fonts-->
-   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-   <!--Bootstrap-->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"></script>
-</head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+            <a class="navbar-brand" href="index.html"><img src="Logo/transparent.png" class="logo"></a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<body style="background-color:#F7F7F9;">
-   <!--Navbar-->
-   <nav class="navbar navbar-expand-lg fixed-top navbar-dark " style="background-color: #40484F;">
-      <a class="navbar-brand" href="index.html">Tristan Hodgson</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-               <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Programming
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#F7F7F9;border-color:#40484F;">
-                    <a class="dropdown-item" href="programming.html">All</a>
-                    <a class="dropdown-item" href="personal-projects.html">Personal Projects</a>
-                    <a class="dropdown-item" href="tools.html">Tools</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Linux
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#F7F7F9;border-color:#40484F;">
-                    <a class="dropdown-item" href="linux.html">All</a>
-                    <a class="dropdown-item" href="configs.html">Configs</a>
-                </div>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="about.html">About me</a>
-            </li>
-         </ul>
-      </div>
-   </nav>
-
-   <!--Content-->
-   <div class="blog_section">
-      <h1 id="title">Linux Configs</h1>
-      <br>
-      <h2 id="featured-articles">New Articles</h2>
-      <!--Section 1: Featured Articles-->
-      <div class="card-deck">
-         <!--Card 1-->
-         <div class="card" style="border-width: 0px;border-color:#F7F7F9;background-color:#F7F7F9;">
-            <a href="Articles/linux/configs/my-terminal.html" style="text-decoration: none;">
-               <img src="Articles/linux/configs/my-terminal.png" class="card-img-top" alt="A picture of a google home">
-               <div class="card-body">
-                  <h5 class="card-title">My Terminal</h5>
-                  <p class="card-text">A quick look at how I have my terminal set up</p>
-               </div>
-            </a>
-         </div>
-         <!--Card 2-->
-         <div class="card" style="border-width: 0px;border-color:#F7F7F9;background-color:#F7F7F9;">
-            <a href="Articles/linux/configs/my-terminal.html" style="text-decoration: none;">
-               <img src="Articles/linux/configs/my-terminal.png" class="card-img-top" alt="A picture of a google home">
-               <div class="card-body">
-                  <h5 class="card-title">My Terminal</h5>
-                  <p class="card-text">A quick look at how I have my terminal set up</p>
-               </div>
-            </a>
-         </div>
-         <!--Card 3-->
-         <div class="card" style="border-width: 0px;border-color:#F7F7F9;background-color:#F7F7F9;">
-            <a href="Articles/linux/configs/my-terminal.html" style="text-decoration: none;">
-               <img src="Articles/linux/configs/my-terminal.png" class="card-img-top" alt="A picture of a google home">
-               <div class="card-body">
-                  <h5 class="card-title">My Terminal</h5>
-                  <p class="card-text">A quick look at how I have my terminal set up</p>
-               </div>
-            </a>
-         </div>
-      </div>
-      <br>
-      <!--Section 2: All Articles-->
-      <h2 id="all-articles">Articles Archive</h2>
-      <!--Row 1-->
-      <a href="Articles/linux/configs/my-terminal.html" style="text-decoration: none;">
-         <div class="card mb-4"
-            style="max-width: 1199px;border-width: 0px;border-color:#F7F7F9;background-color:#F7F7F9;padding-left:7%;padding-right:7%;">
-            <div class="row no-gutters">
-               <div class="col-xl-4">
-                  <img src="Articles/linux/configs/my-terminal.png" class="card-img" alt="..." style="height:100%;">
-               </div>
-               <div class="col-md-8">
-                  <div class="card-body" style="background-color:#F7F7F9;">
-                     <h5 class="card-title">My Terminal</h5>
-                     <p class="card-text">A quick look at how I have my terminal set up</p>
-                  </div>
-               </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            Programming
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="programming.html">All</a>
+                            <a class="dropdown-item" href="personal-projects.html">Personal Projects</a>
+                            <a class="dropdown-item" href="tools.html">Tools</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            Linux
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="linux.html">All</a>
+                            <a class="dropdown-item" href="configs.html">Configs</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About me</a>
+                    </li>
+                </ul>
             </div>
-         </div>
-      </a>
-   </div>
-    <div style="width:100%;height:220px;background-color:#40484f;">
-        <div style="max-width:500px;margin: 28px auto 0;padding-top:35px;padding-bottom:30px;font-family:roboto light">
-            <div style="max-width:230px;float: left;padding-left:20px">
-                <p style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;font-family:roboto">Navigation</p>
-                <a href="../../../index.html" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Home</a><br>
-                <a href="../../../programming.html" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Programming</a>
-                <a href="../../../linux.html" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Linux</a><br>
+        </nav>
+
+        <!--Content-->
+        <div class="blog_section">
+            <h1 id="title">Configs</h1>
+            <br />
+            <h2 id="featured-articles">New Articles</h2>
+            <!--Section 1: Featured Articles-->
+            <div class="card-deck">
+                <div class="card featured_articles_card">
+                    <a href="Articles/linux/configs/my-terminal.html" style="text-decoration: none;">
+                        <img src="Articles/linux/configs/my-terminal.png" class="card-img-top" alt="A picture of a google home" />
+                        <div class="card-body">
+                            <h5 class="card-title">My Terminal</h5>
+                            <p class="card-text">
+                                A quick look at how I have my terminal set up
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            <br />
+                <div class="card featured_articles_card">
+                    <a href="Articles/linux/configs/my-terminal.html" style="text-decoration: none;">
+                        <img src="Articles/linux/configs/my-terminal.png" class="card-img-top" alt="A picture of a google home" />
+                        <div class="card-body">
+                            <h5 class="card-title">My Terminal</h5>
+                            <p class="card-text">
+                                A quick look at how I have my terminal set up
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            <br />
+                <div class="card featured_articles_card">
+                    <a href="Articles/linux/configs/my-terminal.html" style="text-decoration: none;">
+                        <img src="Articles/linux/configs/my-terminal.png" class="card-img-top" alt="A picture of a google home" />
+                        <div class="card-body">
+                            <h5 class="card-title">My Terminal</h5>
+                            <p class="card-text">
+                                A quick look at how I have my terminal set up
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div style="max-width:230px;float: right;padding-right:20px">
-                <p style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;font-family:roboto">Me</p>
-                <a href="mailto:hello@tristanhodgson.com" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Email</a><br>
-                <a href="https://github.com/TristanJWH" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Github</a><br>
-                <a href="../../../about.html" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">About</a>
+            <br />
+            <!--Section 2: All Articles-->
+            <h2 id="all-articles">Articles Archive</h2>
+            <a href="Articles/linux/configs/my-terminal.html" style="text-decoration: none;">
+                <div class="card mb-4">
+                    <div class="row no-gutters">
+                        <div class="col-xl-4">
+                            <img src="Articles/linux/configs/my-terminal.png" class="card-img" alt="..." style="height: 100%;" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">My Terminal</h5>
+                                <p class="card-text">
+                                    A quick look at how I have my terminal set up
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div style="width:100%;height:220px;" class="footer_bg">
+            <div style="max-width:500px;margin: 28px auto 0;padding-top: 35px;">
+                <div class="footer_collum" style="float: left; padding-left: 20px;">
+                    <p class="footer_title">Navigation</p>
+                    <a class="footer_link" href="../../../index.html">Home</a><br />
+                    <a class="footer_link" href="../../../programming.html">Programming</a>
+                    <a class="footer_link" href="../../../linux.html">Linux</a><br />
+                </div>
+                <div class="footer_collum" style="float: right; padding-right: 20px;">
+                    <p class="footer_title">Me</p>
+                    <a class="footer_link" href="mailto:hello@tristanhodgson.com">Email</a><br />
+                    <a class="footer_link" href="https://github.com/TristanJWH">Github</a><br />
+                    <a class="footer_link" href="../../../about.html">About</a>
+                </div>
             </div>
         </div>
-    </div>
-</body>
 
+    </body>
 </html>

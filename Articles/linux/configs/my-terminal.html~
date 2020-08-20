@@ -34,7 +34,7 @@
     <body>
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-            <a class="navbar-brand" href="index.html"><img src="../../../Logo/transparent.png" class="logo"></a>
+            <a class="navbar-brand" href="index.html"><img class="logo" src="../../../Logo/transparent.png"></a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -52,7 +52,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../../../index.html">Home</a>
                     </li>
-                    <li class="nav-item dropdown active">
+                    <li class="nav-item dropdown">
                         <a
                             class="nav-link dropdown-toggle"
                             href="#"
@@ -70,7 +70,7 @@
                             <a class="dropdown-item" href="../../../tools.html">Tools</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown active">
                         <a
                             class="nav-link dropdown-toggle"
                             href="#"
@@ -95,63 +95,63 @@
         </nav>
         <!--Content-->
         <div class="article">
-            <h1 id="title">Building Javis: 1</h1>
+            <h1 id="title">My Terminal</h1>
             <h6 id="date">23/07/2020</h6>
             <!--Image-->
             <figure class="figure">
-                <img src="building-jarvis-part-1.jpg" class="figure-img img-fluid rounded" alt="..." />
+                <img src="my-terminal.png" class="figure-img img-fluid rounded" alt="..." />
                 <figcaption class="figure-caption">
-                    Image by <cite>Jonas Leupe</cite> on
-                    <a href="https://unsplash.com/photos/mIFEgEJBE6U">Unsplash</a>
+                    A screenshot of my terminal emulator
                 </figcaption>
             </figure>
-            <h2>Why?</h2>
+            <h2>Alacritty</h2>
             <p>
-                I like the idea of Cortana. I want a way to control my computer with my voice. While many hate Cortana I believe that if I had full
-                control over the voice assistant in my computer I could get it to a point that it would be a help, not a hindrance.
+                I use <a href="https://github.com/alacritty/alacritty">alacritty</a> as my terminal emulator because it is fast, even if I can't claim
+                that I notice that it is supposedly the fastest. This is important to me because if I want to use my terminal it is because I won't to
+                do something quickly therfore waiting around for terminal to load is not particually appealing. Inside of alacritty I use the nord
+                colour theme because it is a nice-looking, cool-coloured colour scheme.
+            </p>
+            <h2>ZSH</h2>
+            <p>
+                If I honest I am not sure why I use
+                <a href="https://www.zsh.org/">ZSH</a>. I think I tried it and then never switched back. Now I use it because I don't really care. I
+                have my ZSH config stored in ~/.config/zsh which you may know is different to the default mess of files in my home folder. To do this
+                yourself you add the line <code class="code">export ZDOTDIR=$HOME/.config/zsh</code> to your ~/.zshenv file.
+            </p>
+            <h2>Starship</h2>
+            <p>
+                I use the <a href="https://starship.rs/">starship</a> cross-shell prompt because it is more easily customisable than many other
+                prompts. Also, I like that it is cross-shell because it means that if I ever get a reason to change shells then I can keep my prompt
+                with no changes. I have my prompt set up to shoe me my working path and then a ❯ symbol on the left all using my terminal's cyan
+                colour. I like this simple prompt because it doesn't distract me and due to how little I need to see other information. Then again I
+                may end up adding a git part to my prompt because I hope to get better at uploading things to my github.
+            </p>
+            <h2>Ufetch</h2>
+            <p>
+                Many people use a program call neofetch in order to display a picture (made of characters) of their distribution's logo and show basic
+                system information. But while this always appealed to me but it slowed the startup of my terminal to a crawl (I may be exaggerating
+                just a bit). My solution a program called
+                <a href="https://gitlab.com/jschx/ufetch">Ufetch</a>. The only disadvantage of this program over a program like neofetch is that it
+                cannot auto detect the distribution you are using.
             </p>
             <p>
-                I also like the idea of talking to an assistant to get the weather and news on my Echo Dot but if that is all it can do then I will
-                use it only once a day. What I want is a way to control my computer with my voice but also have it be able to talk back and reply to
-                simpler questions. Some of you may be asking yourselves why I do not just use an open-source assistant like Mycroft AI. I have looked
-                into it but it seems like it would be a very hacky process to get it to launch applications whereas a personalised solution such as
-                this one can be built to perform anything.
-            </p>
-            <h2>The Goal</h2>
-            <p>
-                My goal with this project is to have a fully functioning voice assistant that can perform all of the same tasks that my Echo Dot can
-                already but written by me.
-            </p>
-            <p>It should be able to perform a basic list of tasks that include:</p>
-            <ul>
-                <li>Search Wolframaplha (the internet)</li>
-                <li>Search Wikipedia</li>
-                <li>Tell and show me the weather</li>
-                <li>Open applications on my computer</li>
-                <li>Go to sleep (stop listening)</li>
-                <li>Power off my computer</li>
-                <li>Runs on Linux</li>
-                <li>
-                    Have an easy enough programming interface to help me add any others
-                </li>
-            </ul>
-            <p>
-                So as you can see not an insignificant amount. However, I have done some preliminary research and it seems we can get other people to
-                fo a lot of the work. Both WolframAlpha and Wikipedia have APIs and google has both text to speech and speech to text programs that
-                are freely available. This should make our jobs significantly easier as we just need to stick it all together.
-            </p>
-            <h2>How I Will Code It</h2>
-            <p>
-                I will be using the python programming language for this project because it is easy to understand and has lots of support for various
-                websites that I want to interface with. As previously mentioned I will be using Google's speech to text and text to speech modules.
-            </p>
-            <p>
-                This may annoy some as one of the main disadvantages of a voice assistant is that they are always listening and sending data to
-                companies like Google but Google has one of if not the best AI as a result of this and I want it to work well. Besides, you can always
-                change it in your version.
+                While there is a program called
+                <a href="https://github.com/dylanaraps/pfetch">Pfetch</a> that is the same underlying program as Ufetch but with auto detection, I do
+                not use it because I don't change distribution much so it barely matters.
             </p>
         </div>
-
+            <div style="max-width: 500px; margin: 28px auto 0; padding-top: 35px; padding-bottom: 30px; font-family: roboto light;">
+                <div style="max-width: 230px; float: left; padding-left: 20px;">
+                    <p style="color: #f7f7f9; text-align: left; padding: 1%; font-size: 20px; font-family: roboto;">Navigation</p>
+                    <a href="../../../index.html" style="color: #f7f7f9; text-align: left; padding: 1%; font-size: 20px;">Home</a><br />
+                    <a href="../../../programming.html" style="color: #f7f7f9; text-align: left; padding: 1%; font-size: 20px;">Programming</a>
+                    <a href="../../../linux.html" style="color: #f7f7f9; text-align: left; padding: 1%; font-size: 20px;">Linux</a><br />
+                </div>
+                <div style="max-width: 230px; float: right; padding-right: 20px;">
+                    <p style="color: #f7f7f9; text-align: left; padding: 1%; font-size: 20px; font-family: roboto;">Me</p>
+                    <a href="mailto:hello@tristanhodgson.com" style="color: #f7f7f9; text-align: left; padding: 1%; font-size: 20px;">Email</a><br />
+                    <a href="https://github.com/TristanJWH" style="color: #f7f7f9; text-align: left; padding: 1%; font-size: 20px;">Github</a><br />
+                    <a href="../../../about.html" style="color: #f7f7f9; text-align: left; padding: 1%; font-size: 20px;">About</a>
         <div style="width:100%;height:220px;" class="footer_bg">
             <div style="max-width:500px;margin: 28px auto 0;padding-top: 35px;">
                 <div class="footer_collum" style="float: left; padding-left: 20px;">
@@ -166,8 +166,5 @@
                     <a class="footer_link" href="https://github.com/TristanJWH">Github</a><br />
                     <a class="footer_link" href="../../../about.html">About</a>
                 </div>
-            </div>
-        </div>
-        
     </body>
 </html>

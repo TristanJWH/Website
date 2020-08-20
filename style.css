@@ -50,7 +50,7 @@ h5,
 h6 {
   font-family: roboto;
   color: #40484f;
-  font-size: 120%;
+  font-size: 170%;
 }
 p {
   font-family: roboto;
@@ -96,9 +96,87 @@ blockquote {
   bottom: 0px;
 }
 a {
-  color: #3586bd;
+  color: #0467C1;
 }
 .code {
   font-family: "Fira Code", monospace;
-  color: #3586bd;
+  color: #0467C1;
+}
+body {
+  background-color: #f7f7f9;
+}
+.navbar {
+  background-color: #40484f;
+}
+.logo {
+  width:40px;
+  position:relative;
+}
+.dropdown-menu {
+  background-color: #f7f7f9;
+  border-color: #40484f;
+}
+.mb-4 {
+  max-width: 1199px;
+  border-width: 0px;
+  border-color: #f7f7f9;
+  background-color: #f7f7f9;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.card-body {
+  background-color: #f7f7f9;
+}
+.featured_articles_card {
+  border-width: 0px;
+  border-color: #f7f7f9;
+  background-color: #f7f7f9;
+}
+.card-title {
+  font-size: 120%;
+}
+.card_link {
+  text-decoration: none;
+}
+.footer_bg {
+  background-color: #40484f;
+}
+.footer_collum {
+  max-width: 230px; 
+}
+.footer_title {
+  color: #f7f7f9;
+  text-align: left;
+  padding: 1%;
+  font-size: 20px;
+  font-family: roboto;
+}
+.footer_link {
+  color: #f7f7f9;
+  text-align: left;
+  padding: 1%;
+  font-size: 20px;
+  font-family: roboto light;
+  text-decoration: none;
+}
+.footer_link:hover {
+  color: #f7f7f9;
+  text-align: left;
+  padding: 1%;
+  font-size: 20px;
+  font-family: roboto;
+  text-decoration: none;
+}
+ul {
+  color: #40484f;
+}
+#date {
+  text-align: center;
+  color: 40484f;
+  opacity: 0.4;
+  font-size: 110%;
+}
+.btn {
+  background-color: #0467C1;
+  border-color: #0467C1;
 }

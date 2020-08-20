@@ -1,91 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-   <title>Blog</title>
-   <link rel="stylesheet" href="../../../style.css">
-   <!--Fonts-->
-   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-   <!--Bootstrap-->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Blog</title>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../style.css">
 </head>
-<body style="background-color: #F7F7F9">
-   <!--Navbar-->
-   <nav class="navbar navbar-expand-lg fixed-top navbar-dark " style="background-color: #40484F;">
-    <a class="navbar-brand" href="index.html">Tristan Hodgson</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-             <a class="nav-link" href="../../../index.html">Home</a>
-          </li>
-          <li class="nav-item dropdown active">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Programming
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#F7F7F9;border-color:#40484F;">
-                  <a class="dropdown-item" href="../../../programming.html">All</a>
-                  <a class="dropdown-item" href="../../../personal-projects.html">Personal Projects</a>
-                  <a class="dropdown-item" href="../../../tools.html">Tools</a>
-              </div>
-          </li>
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Linux
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#F7F7F9;border-color:#40484F;">
-                  <a class="dropdown-item" href="../../../linux.html">All</a>
-                  <a class="dropdown-item" href="../../../configs.html">Configs</a>
-              </div>
-          </li>
-          <li class="nav-item">
-             <a class="nav-link" href="../../../about.html">About me</a>
-          </li>
-       </ul>
-    </div>
- </nav>
-   <!--Content-->
-   <div class="article">
-          <h1 id="title">Basic Git Commands</h1>
-          <h6 style="text-align:center;color:40484f;opacity: 0.4;font-size:110%;">23/07/2020</h6>
-          <!--Image-->
-             <figure class="figure">
-                <img src="basic-git-commands.jpg" class="figure-img img-fluid rounded" alt="...">
-                <figcaption class="figure-caption"><span>Photo by <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Pankaj Patel</a> on <a href="https://unsplash.com/s/photos/git?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
-             </figure>
+<body>
+    <!--Navbar-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+            <a class="navbar-brand" href="index.html"><img src="../../../Logo/transparent.png" class="logo"></a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-         <h2>What is Git</h2>
-         <p>Git is a command line utility that is used for version control.
-         But what does this mean?
-         It means that it is the solution (there are others but none quite as good) to maintaining source code.
-         It allows many versions of a project to be kept without making full copies of the source code every time you make changes.
-         </p>
-         <p>Git can also link to git servers such as Github, Gitlab, Bitbucket or your own git server.
-         This can be useful for collaberation because many people can contribute code to the project without you using a regular cloud storage providor that does not include these festures.</p>
-         <h2>How Do You Use It</h2>
-         <p>Git has a reputation of being a difficult program to use partly because it is terminal (or command prompt) only and that it has a somewhat confusing set of terminology.</p>
-         <p>While I will not adress that last problem in this article (if you wish we can watch <a href="https://www.youtube.com/watch?v=2sjqTHE0zok">this</a> youtube video that explains it well).
-         But I will provide a cheatsheet to the magic words to make the whole system work.</p>
-         <h2>The Cheatsheet</h2>
-         <table class="table table-bordered">
-           <thead>
-             <tr>
-               <th scope="col">Command</th>
-               <th scope="col">Description</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr>
-               <td><code class="code">git init</td>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            Programming
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="../../../programming.html">All</a>
+                            <a class="dropdown-item" href="../../../personal-projects.html">Personal Projects</a>
+                            <a class="dropdown-item" href="../../../tools.html">Tools</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            Linux
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="../../../linux.html">All</a>
+                            <a class="dropdown-item" href="../../../configs.html">Configs</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../about.html">About me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!--Content-->
+    <div class="article">
+        <h1 id="title">Basic Git Commands</h1>
+        <h6 id="date">23/07/2020</h6>
+        <!--Image-->
+        <figure class="figure">
+            <img src="basic-git-commands.jpg" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption"><span>Photo by <a
+                        href="https://unsplash.com/@pankajpatel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Pankaj
+                        Patel</a> on <a
+                        href="https://unsplash.com/s/photos/git?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+            </figcaption>
+        </figure>
+
+        <h2>What is Git</h2>
+        <p>Git is a command line utility that is used for version control.
+            But what does this mean?
+            It means that it is the solution (there are others but none quite as good) to maintaining source code.
+            It allows many versions of a project to be kept without making full copies of the source code every time you
+            make changes.
+        </p>
+        <p>Git can also link to git servers such as Github, Gitlab, Bitbucket or your own git server.
+            This can be useful for collaberation because many people can contribute code to the project without you
+            using a regular cloud storage providor that does not include these festures.</p>
+        <h2>How Do You Use It</h2>
+        <p>Git has a reputation of being a difficult program to use partly because it is terminal (or command prompt)
+            only and that it has a somewhat confusing set of terminology.</p>
+        <p>While I will not adress that last problem in this article (if you wish we can watch <a
+                href="https://www.youtube.com/watch?v=2sjqTHE0zok">this</a> youtube video that explains it well).
+            But I will provide a cheatsheet to the magic words to make the whole system work.</p>
+        <h2>The Cheatsheet</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Command</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="code">git init</td>
                <td>Turn the current folder into a git repo</td>
              </tr>
              <tr>
@@ -130,21 +170,23 @@
          I use github as part of the hosting for this website and consantly forget even the most basic of git commands.
          So as much as I invite you to use this cheatsheet it is just as much for me as for you.</p>
    </div>
-    <div style="width:100%;height:220px;background-color:#40484f;">
-        <div style="max-width:500px;margin: 28px auto 0;padding-top:35px;padding-bottom:30px;font-family:roboto light">
-            <div style="max-width:230px;float: left;padding-left:20px">
-                <p style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;font-family:roboto">Navigation</p>
-                <a href="../../../index.html" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Home</a><br>
-                <a href="../../../programming.html" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Programming</a>
-                <a href="../../../linux.html" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Linux</a><br>
-            </div>
-            <div style="max-width:230px;float: right;padding-right:20px">
-                <p style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;font-family:roboto">Me</p>
-                <a href="mailto:hello@tristanhodgson.com" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Email</a><br>
-                <a href="https://github.com/TristanJWH" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">Github</a><br>
-                <a href="../../../about.html" style="color: #f7f7f9; text-align: left; padding: 1%;font-size:20px;">About</a>
+
+        <div style="width:100%;height:220px;" class="footer_bg">
+            <div style="max-width:500px;margin: 28px auto 0;padding-top: 35px;">
+                <div class="footer_collum" style="float: left; padding-left: 20px;">
+                    <p class="footer_title">Navigation</p>
+                    <a class="footer_link" href="../../../index.html">Home</a><br />
+                    <a class="footer_link" href="../../../programming.html">Programming</a>
+                    <a class="footer_link" href="../../../linux.html">Linux</a><br />
+                </div>
+                <div class="footer_collum" style="float: right; padding-right: 20px;">
+                    <p class="footer_title">Me</p>
+                    <a class="footer_link" href="mailto:hello@tristanhodgson.com">Email</a><br />
+                    <a class="footer_link" href="https://github.com/TristanJWH">Github</a><br />
+                    <a class="footer_link" href="../../../about.html">About</a>
+                </div>
             </div>
         </div>
-    </div>
+        
 </body>
 </html>
